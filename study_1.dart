@@ -1,15 +1,38 @@
 
-void main(){
-print('.....................................................................');
-homework_1();
-print('.....................................................................');
-homework_2();
-print('.....................................................................');
-homework_3();
-print('.....................................................................');
-homework_4();
-print('.....................................................................');
+import 'dart:io';
+
+void main(){  
+  print('...........');
+  print("enter number of homework");
+  print("(1)(2)(3)(4)(0 to end)");
+  print('...........');
+
+while (true) {
+  int numberInput = int.parse(stdin.readLineSync()!);
+if(numberInput == '' || numberInput == 0 ){
+ print('end');
+  break;
+
 }
+else{
+  if(numberInput == 1 ){
+homework_1();
+} 
+if(numberInput == 2 ){
+homework_2();
+}
+if(numberInput == 3 ){
+homework_3();
+}
+if(numberInput == 4 ){
+homework_4();
+}
+  break;
+
+}
+}
+}
+
 
  
 void homework_1(){
